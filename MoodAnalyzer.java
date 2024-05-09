@@ -8,8 +8,8 @@ public class MoodAnalyzer {
 		{
 			return "sad";
 		}
-
-		return "invalid";
+		else	
+			return "happy";
 
 	}
 	public static void main(String[] args) {
