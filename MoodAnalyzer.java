@@ -2,9 +2,21 @@ package com.java.MoodAnalyzer;
 
 public class MoodAnalyzer {
 
-	public  String analyseMood(String mesg)
+	String message;
+
+	public MoodAnalyzer()
 	{
-		if(mesg.contains("sad"))
+
+	}
+
+	public MoodAnalyzer(String message)
+	{
+		this.message=message;
+	}
+
+	public  String analyseMood()
+	{
+		if(message.contains("sad"))
 		{
 			return "sad";
 		}
@@ -14,8 +26,8 @@ public class MoodAnalyzer {
 	}
 	public static void main(String[] args) {
 
-		MoodAnalyzer m=new MoodAnalyzer();
+		MoodAnalyzer m=new MoodAnalyzer("i am in sad mood");
 
-		m.analyseMood("i am in sad mood");
+		m.analyseMood();
 	}
 }
