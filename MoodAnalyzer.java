@@ -14,8 +14,14 @@ public class MoodAnalyzer {
 		this.message=message;
 	}
 
-	public  String analyseMood()
+	public  String analyseMood() throws Exception
 	{
+		if(!message.contains("sad")||!message.contains("happy"))
+		{
+			throw new Exception();
+		}
+			
+		
 		if(message.contains("sad"))
 		{
 			return "sad";
@@ -28,6 +34,10 @@ public class MoodAnalyzer {
 
 		MoodAnalyzer m=new MoodAnalyzer("i am in sad mood");
 
-		m.analyseMood();
+		try {
+			m.analyseMood();
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
 	}
 }
