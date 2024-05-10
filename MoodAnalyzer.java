@@ -25,11 +25,16 @@ public class MoodAnalyzer {
 		{
 		
 		}
-		
+		try {
 		if(message==null)
 		{
 			mood=Mood.NULL;
 			throw new NullPointerException();
+		}
+		}
+		catch(Exception e)
+		{
+			e.getMessage();
 		}
 			
 		

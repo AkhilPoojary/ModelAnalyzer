@@ -7,4 +7,8 @@ public class MoodAnalysisException extends Exception{
 		super(message);
 	}
 	
+	public String getMessage()
+	{
+		return "Happy";
+	}
 }
