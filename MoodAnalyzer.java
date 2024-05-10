@@ -1,6 +1,10 @@
 package com.java.MoodAnalyzer;
 
 public class MoodAnalyzer {
+	
+	enum Mood{
+		HAPPY, SAD, EMPTY, NULL
+	}
 
 	String message;
 
@@ -16,9 +20,16 @@ public class MoodAnalyzer {
 
 	public  String analyseMood() throws Exception
 	{
+		Mood mood;
 		if(!message.contains("sad")||!message.contains("happy"))
 		{
-			throw new Exception();
+		
+		}
+		
+		if(message==null)
+		{
+			mood=Mood.NULL;
+			throw new NullPointerException();
 		}
 			
 		
